@@ -1,0 +1,208 @@
+<script src="https://kit.fontawesome.com/58f81d92db.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jost&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="latest457.css">
+
+
+
+<body>
+<nav>
+<input type="checkbox" id="check">
+<label for="check" class="checkbtn">
+<i class="fas fa-bars"></i></label>
+<label class="logo"><img src="Image-1.jpg" style="width:230px;height:100px;border-radius:12px;"></label>
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="/">Services</a></li>
+<li><a href="/">Tips</a></li>
+<li><a class="active" href="/"><i class="fa-solid fa-phone"></i> Contact Us 800-800-8000</a></li>
+</ul>
+</nav>
+
+
+
+<ul class="icon-menu">
+<li><a href="/" class="icon-links"><i class="fa-brands fa-facebook"></i></a></li>
+<li><a href="/" class="icon-links"><i class="fa-brands fa-twitter"></i></a></li>
+<li><a href="/" class="icon-links"><i class="fa-brands fa-yelp"></i></a></li>
+</ul>
+
+
+
+<div class="body2">
+
+<div class="heading">
+<h1>Blue Star Moving</h1>
+<br>
+<p>One Trip at a Time</p><br><br><a href="/">Book Us </a>
+</div>
+
+<div class="tours">
+
+<div class="places">
+<h2>Ohio</h2>
+<img src="/" style="width:300px;height:250px;border-radius:12px;">
+<br><br>
+</div>
+
+<div class="places">
+<h2>Iowa</h2>
+<img src="IMG_0543 (1).jpg" style="width:300px;height:250px;border-radius:12px;">
+<br><br>
+</div>
+
+<div class="places">
+<h2>Florida</h2>
+<img src="/" style="width:300px;height:250px;border-radius:12px;">
+<br><br>
+</div>
+</div>
+</div>
+<br><Br><Br>
+<div class="row3">
+<section class="blurb">
+<h1>A National Moving Service with Local Ties</h1>
+<p>Moving is difficult.  It can be even more difficult without the right people.  At Blue Star Movers, we work on the premise that every move is different.  With a combined 10+ years experience, relatable and professional staff, and many many hours on the road, we can expedite your experience so you can get back to your life ans quickly as possible.  With a FREE consultation and 24hr emergency service, all potential needs are met at Blue Star Movers.</p>
+</section>
+<img src="/" style="width:300px;height:250px;border-radius:12px">
+</div>
+
+
+<section class="course">
+<h1>Residential And Commercial</h1>
+<f>For over 5 years we have been providing highest standard moving services</f>
+
+<div class="row">
+<div class="course-col">
+<i class="fa-solid fa-house"></i>
+<h3>Residential</h3><br>
+<p>We specialize in moves throught the NYC Metropolitan area.  We are a local business comprised of local people.</p>
+</div>
+
+<div class="course-col">
+<i class="fa-solid fa-truck"></i>
+<h3>Long Distance</h3><br>
+<p>We have experience in large, international moves.  If moving even across the country is a necessity for you, we will be able to provide.</p>
+</div>
+
+
+<div class="course-col">
+<i class="fa-solid fa-building"></i>
+<h3>Home or Apartment</h3><br>
+<p>Whether you own a home or live on the 60th floor, your move is in good hands with us. </p>
+</div>
+</div>
+
+
+
+</section>
+
+
+
+
+
+<section class="form2">
+<h1>Contact Us Now</h1>
+<f>Fill out our form at your leisure for a FREE quote</f>
+
+<div class="row2">
+<div class="course-col2">
+<img src="IMG_1874.jpg" id="formimg">
+</div>
+
+<div class="course-col2">
+<h3>Get  A Quote Free</h3>
+<p>Or Contact us on <i class="fa-brands fa-facebook"></i>Facebook or <i class="fa-brands fa-twitter"></i>Twitter</p>
+
+    <?php 
+if(isset($_POST['submit'])){
+    $to = "ledouard027@gmail.com"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    $name = $_POST['name'];
+    $subject = "Form submission";
+    $subject2 = "Copy of your form submission";
+    $message = $name . " " .  wrote the following:" . "\n\n" . $_POST['message'];
+    $message2 = "Here is a copy of your message " . $name . "\n\n" . $_POST['message'];
+
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    echo "Mail Sent. Thank you " . $name . ", we will contact you shortly.";
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
+    }
+?>
+
+
+
+
+
+<div section="hero">
+<form action="" method="post">
+
+<div class="input-group">
+<input type="text" id="name" required>
+<label for="name">Your Name</label>
+</div>
+
+<div class="input-group">
+<input type="text" id="email" required>
+<label for="">Email Address</label>
+</div>
+
+<div class="input-group">
+<input type="number" id="number" required>
+<label for="">Phone Number</label>
+</div>
+
+<div class="input-group">
+<textarea id="message" rows="8"></textarea>
+<label for="message">Comments</label>
+</div>
+
+<button type="submit">SUBMIT</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="footer-content">
+<h3>Blue Star Movers</h3>
+<f>A Better Way to Move</f>
+<ul class="socials">
+<li><a href="/"><i class="fa-brands fa-facebook"></i></a></li>
+<li><a href="/"><i class="fa-brands fa-twitter"></i></a></li>
+<li><a href="/"><i class="fa-brands fa-instagram"></i></a></li>
+</ul>
+</div>
+<div class="footer-bottom">
+<f>copyright &copy;2022 BlueStarMovers, designed by ME</f>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
